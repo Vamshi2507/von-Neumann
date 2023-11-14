@@ -20,9 +20,9 @@ binTemp = open("RAMtemplate.v", 'r')
 binaryCode = binTemp.read()
 binTemp.close()
 if sys.platform == "win32":
-    binFile = open("VerilogModules\\RAM.v", 'w+')
+    binFile = open("RAM.v", 'w+')
 elif (sys.platform == "linux") or (sys.platform == "darwin"):
-    binFile = open("VerilogModules/RAM.v", 'w+')
+    binFile = open("RAM.v", 'w+')
 else:
     print("What Operating system are you using?\nBecause this program is only made for Windows, Linux and MacOS")
 binFile.write(binaryCode.format(assembled[0], assembled[1], assembled[2], assembled[3], assembled[4], assembled[5], assembled[6], assembled[7], assembled[8], assembled[9], assembled[10], assembled[11], assembled[12], assembled[13], assembled[14], assembled[15]))
