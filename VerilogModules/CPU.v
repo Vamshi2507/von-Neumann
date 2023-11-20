@@ -64,5 +64,5 @@ register8 O(.clk(clk), .D(bus), .Q(OutPut), .EI(OI));
 bcd2sevenseg seg0(.bcd(OutPut[3:0]), .seg(LED1));
   // 8 bit register output
 bcd2sevenseg seg1(.bcd(OutPut[7:4]), .seg(LED2));
-
+// the above two lines of code are BCD being decoded to 7 segment display
 endmodule
