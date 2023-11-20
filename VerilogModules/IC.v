@@ -1,3 +1,4 @@
+// This is the instruction counter. It controls the flow of the execution and stores the current instruction to be executed
 `timescale 1ns/1ps
 module IC(input clk, input enable, input [3:0] Instruction, output reg [14:0] ctrl_wrd);
 wire CLK;
@@ -49,7 +50,7 @@ always @ (posedge CLK)
                     4'b1111: ctrl_wrd <= 15'b000000000000000; // HLT
                     default: ctrl_wrd <= 15'b000000000000000;
                     endcase 
-                    reset_in <= 1'b1; // Have some doubt here..... Maybe this part can go wrong .....
+                    reset_in <= 1'b1; // Have some doubt here. Maybe this part can go wrong.
                     end                  
             default: ctrl_wrd <= 15'b000000000000000;
         endcase                          
