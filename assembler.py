@@ -16,7 +16,7 @@ for item in code:
     else : 
         assembled.append("0000_" + str(bin(int(item[0]))[2:].zfill(4)))
 source.close()
-binTemp = open("RAMtemplate.v", 'r')
+binTemp = open("RAM_temp.v", 'r')
 binaryCode = binTemp.read()
 binTemp.close()
 if sys.platform == "win32":
