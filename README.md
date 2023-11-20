@@ -15,7 +15,7 @@ The Assembly language compiler is in the form of a python script as well as a de
 In order to use the assembler, use the syntax mentioned below:
 
 ```shell
-$ python Assembler_v2.py <input_filename_with_extension>
+$ python assembler.py <input_filename_with_extension>
 ```
 
 And press Enter.
