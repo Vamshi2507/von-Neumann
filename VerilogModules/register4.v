@@ -7,3 +7,4 @@ begin
     Q <= D;
 end
 endmodule
+// Here D is data and Q is the content of the 4 bit register.
