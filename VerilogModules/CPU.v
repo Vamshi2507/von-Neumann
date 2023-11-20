@@ -20,7 +20,7 @@ wire [3:0] Pcount;
 wire [3:0] Addr_in;
 wire [7:0] Dispout;
 wire [7:0] aluOut;
-wire HLT, MI, RI, RO, IO, II, AI, AO, SO, SU, BI, OI, CE, CO, J;
+wire HLT, MI, RI, RO, IO, II, AI, AO, SO, SU, BI, OI, CE, CO, J;   //these are ASM commands
 wire PCrst, flag;
 
 
@@ -53,8 +53,9 @@ IC ic(.clk(clk), .enable(1'b1), .Instruction(Instout[7:4]), .ctrl_wrd({HLT, MI, 
 
 register8 O(.clk(clk), .D(bus), .Q(OutPut), .EI(OI));
 
-
+// 4 bit register output
 bcd2sevenseg seg0(.bcd(OutPut[3:0]), .seg(LED1));
+  // 8 bit register output
 bcd2sevenseg seg1(.bcd(OutPut[7:4]), .seg(LED2));
 
 endmodule
