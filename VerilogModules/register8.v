@@ -7,3 +7,4 @@ begin
     Q <= D;
 end
 endmodule
+// This works on the same principle as register4.v
