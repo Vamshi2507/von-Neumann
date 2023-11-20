@@ -8,7 +8,14 @@
 `include "triBuff4.v"
 `include "RAM.v"
 `include "bcd2disp.v"
-
+// All the different components:
+// Registers (A, B, InstReg, O): These are 8-bit registers.
+// Tristate Buffers (triA, triInstReg, tri_alu): These are used to control the flow of data on the bus.
+// ALU (alu): Performs arithmetic operations.
+// PC (pc): Program counter.
+// Memory Address Register (MemAdd): A 4-bit register for memory address.
+// RAM (ram): Random Access Memory.
+// Instruction Controller (ic): Controls the execution flow based on the instruction.
 
 module CPU(input clkin, output [7:0] OutPut, output [6:0] LED1, output [6:0] LED2);
 wire [7:0] bus;
